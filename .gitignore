@@ -10,7 +10,7 @@ yarn-debug.log*
 yarn-error.log+
 
 # output from webpack
-dist/
+build/
 
 # zip file for initial aws deployment
 *.zip
