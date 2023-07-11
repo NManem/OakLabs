@@ -1,0 +1,48 @@
+Data Notes
+- Comes in as a JSON
+- Each Key is pkmn dex num
+    - Default key = '0'
+        - temoti (details) = object
+            - waza (moves) = array of objects, 
+                - id = move num
+                - val = % that move is used
+            - tokusei (ability) = array of objects
+                - id = pkdex num
+                - val = % that ability is used
+            - seikaku (nature) = array of objects
+                - id = nature num
+                - val = % that nature is used
+            - motimono (item) = array of objects
+                - id = item num
+                - val = % that item is used
+            - pokemon = array of objects, pkmn used w curr pkmn
+                - id = pkdex num
+                - form = form num 
+            - terastal = array of objects, teratype
+                - id = tera id
+                - val = % that tera is used
+
+        - lose, object
+            - waza (moves) = array of objects, moves that defeated the curr pkmn
+                - id = pkdex num
+                - form = form num 
+            - pokemon = array of objects, pkmn that were used to defeat curr pkmn
+                - id = pkdex num
+                - form = form num
+        - win
+            - waza (moves) = array of objects, moves that were used by the curr pkmn
+                - id = pkdex num
+                - form = form num 
+            - pokemon = array of objects, pkmn that curr pkmn defeated
+                - id = pkdex num
+                - form = form num
+
+
+Constants
+Form Names
+https://resource.pokemon-home.com/battledata/json/zkn_form_us.json?v=2814144
+
+Item Names
+https://resource.pokemon-home.com/battledata/json/itemname_us.json?v=2814144
+
+

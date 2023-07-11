@@ -1,0 +1,14 @@
+Tasks
+
+1. Figure out which of the two steps to do first
+    a) Plan the organizational structure of the data
+    b) Parse the Data Set JSON into an organized data structure
+
+    c) (last) confirm differences in data sets from different times
+
+- Figure out the URL calls (specifically the time field)
+
+
+Remainder Tasks:
+- how to store the data (DB or text)
+- front end (REACT)

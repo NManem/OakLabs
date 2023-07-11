@@ -1,0 +1,40 @@
+Pokemon Data Interface
+https://resource.pokemon-home.com/battledata/t_pokemonranking.html?r=468902
+- after r is a time variable
+- will auto update time so this link still works
+
+Reg C Data Set
+https://resource.pokemon-home.com/battledata/ranking/scvi/apx62uoxgkjlt4g5g4pm/0/1688101251/pdetail-5
+https://resource.pokemon-home.com/battledata/ranking/scvi/apx62uoxgkjlt4g5g4pm/2/1688177028/pdetail-5
+- pdetail-# goes from 1 to 6. contains all pokemon and their info
+- 'qox62uoxgkjlt4f4g4pm' indicates format
+- include time in second to last arguement
+- first vs second url, 0 vs 2. not sure when to change this. maybe based on time
+    - my theory: there is a certain time pont where the URL switches from 0 to 2. that time point is prob when Reg D begins
+- time stamp now stays the same (1688177028) regardless of which day its pulled. probably cause season is over
+
+Reg C Pokemon Order
+https://resource.pokemon-home.com/battledata/ranking/scvi/apx62uoxgkjlt4g5g4pm/2/1688177028/pokemon
+- same as above
+
+Reg D Data Set
+https://resource.pokemon-home.com/battledata/ranking/scvi/quklrfll3ju2nbiquxrm/0/1688482836/pdetail-5
+
+Reg C Pokemon Order
+https://resource.pokemon-home.com/battledata/ranking/scvi/quklrfll3ju2nbiquxrm/0/1688482836/pokemon
+
+Time Data of Pulls
+Jul4, 11:46/47 AM (same thing when I did at at 12:00PM)
+Pokemon Order: https://resource.pokemon-home.com/battledata/ranking/scvi/quklrfll3ju2nbiquxrm/0/1688482836/pokemon
+Reg D Data: https://resource.pokemon-home.com/battledata/ranking/scvi/quklrfll3ju2nbiquxrm/0/1688482836/pdetail-5
+
+Jul4, 1:31 PM
+Reg D Data: https://resource.pokemon-home.com/battledata/ranking/scvi/quklrfll3ju2nbiquxrm/0/1688490040/pdetail-5
+
+Jul4, 4:04 PM
+Pokemon Order: https://resource.pokemon-home.com/battledata/ranking/scvi/quklrfll3ju2nbiquxrm/0/1688493641/pokemon
+Reg D Data: https://resource.pokemon-home.com/battledata/ranking/scvi/quklrfll3ju2nbiquxrm/0/1688493641/pdetail-5
+
+Jul8, 3:12 PM
+Pokemon Order: https://resource.pokemon-home.com/battledata/ranking/scvi/quklrfll3ju2nbiquxrm/0/1688842850/pokemon
+Reg D Data: https://resource.pokemon-home.com/battledata/ranking/scvi/quklrfll3ju2nbiquxrm/0/1688842850/pdetail-5
