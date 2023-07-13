@@ -19,3 +19,6 @@ build/
 coverage/
 
 .vscode/
+
+# personal data set files
+server/data_sets

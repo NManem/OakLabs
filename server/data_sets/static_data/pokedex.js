@@ -986,7 +986,7 @@ const pokedex = [
     "Great Tusk",
     "Scream Tail",
     "Brute Bonnet",
-    "Flutter Mane",      //986
+    "Flutter Mane",
     "Slither Wing",
     "Sandy Shocks",
     "Iron Treads",

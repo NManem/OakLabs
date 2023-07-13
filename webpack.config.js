@@ -33,8 +33,9 @@ module.exports = {
     static: {
       directory: path.join(__dirname, './build'),
     },
+    historyApiFallback: true,
     proxy: {
-      '/api': 'http://localhost:3000',
+      '/api/**': 'http://localhost:3000',
     },
   },
   plugins: [
