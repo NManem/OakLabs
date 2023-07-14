@@ -5,18 +5,44 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
 }
+
+.headerImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%; /* Adjust this as needed */
+  height: auto;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
   color: #444; /* Dark gray */
   text-align: center;
 }
 
-.graphouter {
+.graphOuter {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.dropdown-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px; 
+}
+
+.dropdown-container img {
+  margin-right: 10px; 
+  width: 80px;  /* Change this to your desired width */
+  height: 80px; /* Change this to your desired height */
+  object-fit: cover;
 }
 
 .graph {
@@ -45,6 +71,44 @@ h1, h2, h3, h4, h5, h6 {
 button:hover {
   background-color: #0056b3; 
 } */
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: block;
+  background-color: #f5f5f5;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-menu option {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu option:hover {
+  background-color: #007BFF;
+  color: white;
+}
+
+.pokemonSelectors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon-dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /* Style the dropdown container */
 /* .dropdown {

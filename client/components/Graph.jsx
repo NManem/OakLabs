@@ -13,37 +13,39 @@ import { ScatterChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Scatt
 //   { date: '2023-07-09', rank1: 10, rank2: 7 },
 //   { date: '2023-07-10', rank1: 15, rank2: 11 },
 //   // Add as many objects as you need
-// ];
+// ];6610f2
 
 const colors = [
   "#8884d8",
-  "#82ca9d",
-  "#ffc658",
+  "#ff8042",
+  "#e83e8c",
   "#0088fe",
   "#00c49f",
   "#ffbb28",
-  "#ff8042",
   "#6610f2",
   "#6f42c1",
-  "#e83e8c"
+  "#82ca9d",
+  "#ffc658"
 ];
 
 //TODO: add Icons to the charts
 const Graph = (props) => {
 
-  const { title, graphData, yaxisRange, pokemonList, type } = props;
+  const { graphData, yaxisRange, xAxisList, type } = props;
 
   // convert date to timestamps for graph to read it
   graphData.forEach(dataObj => {
     // store timestamp instead of date string
     dataObj.date = new Date(dataObj.date).getTime();
   });
+  console.log(graphData)
 
   // Get all pokemon names in an array
-  const dataKeys = [];
-  pokemonList.forEach((pokemonObj) => {
-    dataKeys.push(pokemonObj.pokeName);
-  });
+  // const dataKeys = xAxisList;
+  // console.log('xaxis: ', xAxisList)
+  // xAxisList.forEach((pokemonObj) => {
+  //   dataKeys.push(pokemonObj.pokeName);
+  // });
 
   // default ticker function
   var tick = {
@@ -55,18 +57,18 @@ const Graph = (props) => {
   // If usage chart, need to reverse the ranks so it appears correctly
   if (type === 'usage') {
     console.log('YIPEEE')
-    for (let dataobj of graphData) {
-      // console.log(dataobj)
-      for (let key in dataobj) {
-        // console.log(key)
-        if (key !== 'date') dataobj[key] *= -1
-        // console.log(dataobj[key])
-      }
-    }
+    // for (let dataobj of graphData) {
+    //   // console.log(dataobj)
+    //   for (let key in dataobj) {
+    //     // console.log(key)
+    //     if (key !== 'date') dataobj[key] *= -1
+    //     // console.log(dataobj[key])
+    //   }
+    // }
 
     //change axis for chart
-    yaxisRange[0] *= -1
-    yaxisRange[1] *= -1
+    // yaxisRange[0] *= -1
+    // yaxisRange[1] *= -1
 
     // change function
     tick.func = function (t) {
@@ -80,7 +82,7 @@ const Graph = (props) => {
   return (
     <div className='graph'>
       <ScatterChart
-        width={500}
+        width={600}
         height={300}
         data={graphData}
         margin={{
@@ -93,7 +95,7 @@ const Graph = (props) => {
 
 
         {/* <YAxis type="number" domain={[0, 20]} tickFormatter={(tickItem) => 20 - tickItem} /> // Customize your y-axis domain */}
-        <YAxis type="number" domain={[-1, -20]} tickFormatter={(tickItem) => tick.func(tickItem)} /> // Customize your y-axis domain
+        <YAxis type="number" tickFormatter={(tickItem) => tick.func(tickItem)} /> // Customize your y-axis domain
         <Tooltip />
         <Legend />
         {/* <Line type="monotone" dataKey="rank1" stroke="#8884d8" activeDot={{ r: 8 }} />
@@ -106,7 +108,7 @@ const Graph = (props) => {
             <Scatter dataKey={key} key={key + "scatter"} fill={colors[index % colors.length]} />
           </>
         ))} */}
-        {dataKeys.map((key, index) => (
+        {xAxisList.map((key, index) => (
           <>
             <Scatter name={key} dataKey={key} fill={colors[index % colors.length]} shape="circle" key={key} line />
             {/* <Line type="monotone" dataKey={key} stroke={colors[index % colors.length]} dot={false} /> */}

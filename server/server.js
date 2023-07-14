@@ -1,11 +1,13 @@
 const path = require('path');
 const express = require('express');
+var cors = require('cors');
 
 const app = express();
 const PORT = 3000;
 
 const apiRouter = require('./routes/api.js');
 const usageRouter = require('./routes/usage.js');
+const movesRouter = require('./routes/moves.js');
 
 /**
  * handle parsing request body
@@ -13,6 +15,7 @@ const usageRouter = require('./routes/usage.js');
  */
 app.use(express.json());
 app.use('*', express.urlencoded({ extended: true }));
+app.use(cors());
 
 /**
  * handle requests for static files
@@ -28,6 +31,7 @@ app.get('/', (req, res) => {
 
 // Request for usage stats
 app.use('/api/usage', usageRouter);
+app.use('/api/moves', movesRouter);
 
 // Request for api
 app.use('/api', apiRouter);
